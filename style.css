@@ -84,10 +84,10 @@ input:focus + label{
     font-weight: 500;
 }
 
-/* input:not(:focus):valid + label{
+input:not(:focus):valid + label{
     top: -10px;
     z-index: 2;
-} */
+} 
 
 /* input field when focus style */
 .input-group > input:focus{
