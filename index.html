@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sign In Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <img src="./googleLogo.png" alt="google logo">
+            <h2>Sign In</h2>
+
+            <div class="input-group">
+                <input type="text" required id="email">
+                <label>Email or phone</label>
+            </div>
+
+            <div class="input-group">
+                <input type="password" required id="Password">
+                <label>Password</label>
+            </div>
+
+            <div class="show-password">
+                <input type="checkbox" name="showPassword" id="show">
+                <label for="show">Show Password</label>
+            </div>
+
+            <div class="button-group">
+                <a href="">Forget password ?</a>
+                <input type="submit" value="Next">
+            </div>
+        </form>
+    </div>
+
+    <!-- Internal Javascript for show password -->
+    <script>
+        const password = document.getElementById("Password")
+        const show = document.getElementById("show")
+
+        show.addEventListener('click',function(){
+            const type = password.getAttribute("type") === "password" ? "text" : "password"
+
+            password.setAttribute("type",type)
+        })
+    </script>
+</body>
+</html>
